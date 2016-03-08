@@ -1,0 +1,26 @@
+body {
+  margin-top: 8;
+  margin-left: 24;
+  margin-right: 8;
+  margin-bottom: 8;
+  color: black;
+  background: white url(red-edge.png);
+  background-repeat: repeat-y;
+  font-family: arial,sans-serif;
+}
+
+span.footnote {
+  font-size: small;
+}
+
+span.title {
+  font-style: italic;
+}
+
+p {
+  margin-left: 1em;
+}
+
+p.heading {
+  margin-left: 0;
+}

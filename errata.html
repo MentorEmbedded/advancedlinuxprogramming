@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta name="Author" content="CodeSourcery, LLC">
+ <meta name="description" content="Advaned Linux Programming web site">
+ <link rel="stylesheet" type="text/css" href="alp.css">
+ <title>Advanced Linux Programming</title>
+</head>
+<body>
+
+<a href="http://www.advancedlinuxprogramming.com/"><img border="0" src="alp-header.png"></a>
+<hr size="1" noshade>
+
+
+
+<h3>Reporting an Error</h3>
+
+<p>Should you find an error in <span class="title">Advanced Linux
+Programming</span> that is not already listed here,
+please send mail to 
+<a href="mailto:alp-errata@advancedlinuxprogramming.com">alp-errata@advancedlinuxprogramming.com</a>.</p>
+
+<h3>Errata for <span class="title">Advanced Linux Programming</span></h3>
+
+<ul>
+
+ <li>
+  <b>page <i>iv</i> (publication information)</b>
+
+  <p class="heading">Due to an oversight in production, an incorrect copyright notice
+  was included.  The copyright notice should read:</p>
+   
+  <blockquote>
+  Advanced Linux Programming
+  <br><br>
+  FIRST EDITION: June, 2001
+  <br><br>
+  Copyright &copy; 2001 by New Riders Publishing.  This material may be
+  distributed only subject to the terms and conditions set forth in the Open
+  Publication License, Version 1, no options exercised.  (The latest version of this license
+  is available at <tt>http://www.opencontent.org/openpub/</tt>).
+  </blockquote>
+ </li>
+
+ <li>
+ <b>page <i>xx</i></b>
+
+ <p>The term &quot;GNU/Linux&quot; is misspelled as &quot;GNU/Liux.&quot;</p>
+ </li>
+
+ <li>
+ <b>page 6</b>
+ <p>In Listing 1.1, add <tt>#include &lt;stdlib.h&gt;</tt> since <tt>atoi</tt> is used.</p>
+ </li>
+
+ <li>
+ <b>page 8</b>
+ <p>The first paragraph of Section 1.2.2 should refer to <tt>reciprocal.cpp</tt>,
+ not <tt>utilties.cpp</tt>.</p>
+ </li>
+
+ <li>
+ <b>page 31</b>
+ <p>In the third paragraph, the third sentence should read:
+ <blockquote> 
+ You should still always check for invalid input and produce sensible error
+ messages in response to such input.
+ </blockquote>
+ The words &quot;to such&quot; are missing in the book as printed.
+ </p>
+ </li>
+
+ <li>
+ <b>page 34</b>
+ <p>In the code, the comment for <code>case ENOENT</code> should
+ read <code>PATH does not exist</code>.
+ </p>
+ </li>
+
+ <li>
+  <b>page 38</b>
+  <p>
+   The first sentence in Section 2.3.2 should refer to <q>an archive</q>
+   rather than <q>a archive</q>.
+  </p>
+ </li>
+
+ <li>
+ <b>page 38</b>
+ <p>In the last sentence of the text, omitting the sidebar, the
+ resulting object file is <code>test1.o</code>, not <code>test.o</code>.
+ </p>
+ </li>
+
+ <li>
+ <b>page 39</b>
+ <p>In the first paragraph, the linker stops <em>searching</em>
+ directories.
+ </p>
+ </li>
+
+ <li>
+ <b>page 41</b>
+ <p>In the paragraph beginning with "Static libraries", modify
+ "If decide to link" to "If you decide to link".
+ </p>
+ </li>
+
+ <li>
+ <b>page 41</b>
+ <p>When linking statically, linking in the math library is
+ also required.  Thus, the compilation line becomes
+ <code>gcc -static -o tifftest tifftest.c -ltiff -ljpeg -lz -lm</code>.
+ </p>
+ </li>
+
+ <li>
+ <b>page 43</b>
+ <p>The indented line of code near the bottom of the page should refer to <code>my_function</code>, not <code>foo</code>.
+ </p>
+ </li>
+
+ <li>
+ <b>page 48</b>
+ <p>In the first paragraph, the first technique has "considerable risks",
+ not "considerably risks".
+ </p>
+ </li>
+
+ <li>
+ <b>page 53</b>
+ <p>The word &quot;it&quot; in the last sentence of the second paragraph
+ should instead be &quot;is&quot;.
+ In particular, the sentence should read:
+ <blockquote>
+  The default disposition for these signals is to terminate the process
+  and produce a core file.
+ </blockquote>
+
+ <li>
+ <b>page 57</b>
+ <p>The word &quot;is&quot; in the last sentence should instead be &quot;it.&quot;
+ In particular, the sentence should read:
+ <blockquote>
+ Instead, when a child process terminates, it becomes a zombie process.
+ </blockquote>
+
+ <li>
+ <b>page 60</b>
+ <p>The code in <code>clean_up_child_process</code> would not work correctly if there were more
+ than one child process.  The Linux kernel will only call the signal handler once if two or more
+ child processes terminate at almost the same time.  Therefore, if there is may be more than one child
+ process, the signal handler must repeatedly call <code>waitpid</code> (or one of the other 
+ related functions) with the <code>WNOHANG</code> option until <code>waitpid</code> returns zero.</p>
+ </li>
+
+ <li>
+ <b>page 73</b>
+ <p>In the first paragraph, the second argument is for <code>pthread_key_create</code>, not
+ <code>pthread_key_t</code>.  Thus, the <code>pthread_key_create</code> function takes two arguments:
+ a pointer to a <code>pthread_key_t</code> variable and a cleanup function.</p>
+ </li>
+
+ <li>
+ <b>page 98</b>
+ <p>The example code for calling <code>shmget</code> should use <code>S_IWUSR</code>, not
+ <code>S_IWUSER</code>.  This write permission flag is spelled correctly throughout the 
+ rest of the page.  For a list of available flags, see the section 2 <code>stat</code> man page.</p>
+ </li>
+
+ <li>
+ <b>page 108</b>
+ <p>In Listing 5.6, the function used to parse the string
+ should be <code>sscanf</code>, not <code>scanf</code>.</p>
+ </li>
+
+ <li>
+ <b>page 110</b>
+ <p>The last sentence of section 5.4.1 should read:
+ <blockquote>
+ Data written to the file descriptor <code>write_fd</code> can be read back from <code>read_fd</code>.
+ </blockquote> 
+ <p>
+  The identifiers <code>write_fd</code> and <code>read_fd</code> are
+ swapped in the text as printed.</p>
+ </li>
+
+ <li>
+ <b>page 117</b>
+ <p>In section 5.5.2, the list of system calls should mention 
+ <tt>close</tt>, not <tt>closes</tt>.</p>
+ </li>
+
+ <li>
+ <b>page 120</b>
+ <p>In Listing 5.10, <tt>text</tt> should be checked for the
+ <tt>quit</tt> message before it is freed.  The consequent of the
+ <tt>strcmp</tt> should be <tt>free (text); return 1</tt>.  Its
+ alternative should be <tt>free (text)</tt>.  The standalone
+ <tt>free</tt> statement should be omitted.</p>
+ </li>
+
+ <li>
+ <b>page 121</b>
+ <p>In Listing 5.10, the <code>client_name_len</code> variable in
+  the <code>do</code>-loop should be initialized to 
+  <code>sizeof(client_name)</code> before being passed to
+  <code>accept</code>.
+ </p>
+ </li>
+
+ <li>
+ <b>page 121</b>
+ <p>In Listing 5.10, the call to <code>bind</code> on the ninth
+ line of this page should cast the second argument to a
+ <code>struct sockaddr *</code>.  That is, the <code>bind</code>
+ call should be 
+ <blockquote>
+ <code>bind (socket_fd, (struct sockaddr *) &name, SUN_LEN (&name))</code>.
+ </blockquote></p>
+ <p>Similarly, on the nineteenth line, the second argument of
+ <code>accept</code> should be cast:
+ <blockquote>
+ <code>accept (socket_fd, (struct sockaddr *) &client_name, &client_name_len)</code>
+ </blockquote>
+ </p>
+ </li>
+
+ <li>
+ <b>page 122</b>
+ <p>In Listing 5.11, the call to <code>connect</code> on the sixth
+ line from the end should cast the second argument to a
+ <code>struct sockaddr *</code>.  That is, the <code>connect</code>
+ call should be 
+ <blockquote>
+ <code>connect (socket_fd, (struct sockaddr *) &name, SUN_LEN (&name))</code>.
+ </blockquote></p>
+ </p>
+ </li>
+
+ <li>
+ <b>page 125</b>
+ <p>In Listing 5.12, the call to <code>connect</code> on the second
+ line should cast the second argument to a
+ <code>struct sockaddr *</code>.  That is, the <code>connect</code>
+ call should be 
+ <blockquote>
+ <code>connect (socket_fd, (struct sockaddr *) &name, sizeof (struct sockaddr_in))</code>.
+ </blockquote></p>
+ </p>
+ </li>
+
+ <li>
+ <b>page 130</b>
+ <p>The third line of the first full paragraph should omit the word "cause".
+ </p>
+ </li>
+
+ <li>
+ <b>page 132</b>
+ <p>The sixth line of the first full paragraph should refer
+ to &quot;the character device&quot;, not the &quot;the block device&quot;.
+ </p>
+ </li>
+
+ <li>
+ <b>page 133</b>
+ <p>In the first footnote, the Windows device name should be <code>LPT1</code>,
+    not <code>LRP1</code>.
+ </li>
+
+ <li>
+ <b>page 133</b>
+ <p>In the second footnote, the ASCII code for a carriage return should be 13, not 14.</p>
+ </li>
+
+ <li>
+  <b>page 149</b>
+  <p>The check for whether or not the read failed should be:</p>
+  <blockquote>
+   <code>if (bytes_read == 0 || bytes_read != sizeof (buffer))</code>
+  </blockquote>
+  <p>
+   Note that the operator for the second half of the conditional should
+   be <code>!=</code> rather than <code>==</code>.
+  </p>
+ </li>
+
+ <li>
+ <b>page 171</b>
+ <p>In the third paragraph, use <code>F_SETLKW</code>, not <code>F_SETLCKW</code>.  This
+ <code>LK</code> abbreviation differs from the <code>LCK</code> abbreviation in <code>F_RDLCK</code> and
+ <code>F_WRLCK</code>.
+ </p>
+ </li>
+
+ <li>
+ <b>page 174</b>
+ <p>The first sentence of the third paragraph of section 8.5 
+ should end with &quot;pointer to a <code>struct rlimit</code>&quot;, rather
+ than &quot;pointer to a <code>structrlimit</code>&quot; as printed.  Note
+ the space between <code>struct</code> and <code>rlimit</code>.</p>
+ </li>
+
+ <li>
+ <b>page 181</b>
+ <p>The description of <code>tv_nsec</code> should read &quot;<code>tv_nsec</code>,
+ an additional number of nanoseconds&quot; rather than &quot;<code>tv_nsec</code>,
+ an additional number of milliseconds.&quot;</p>
+ </li>
+
+ <li>
+ <b>page 183</b>
+ <p>The third parameter in the call to <code>readlink</code> should
+ be <code>sizeof (target_path) - 1</code> to allow for the terminating
+ <code>NUL</code> character.</p>
+ </li>
+
+ <li>
+ <b>page 185</b>
+ <p>The file presented in Listing 8.11 should be named "itimer.c".</p>
+ </li>
+
+ <li>
+ <b>page 186</b>
+ <p>The <code>sysinfo</code> manual page describes <code>struct
+ sysinfo</code>, not <code>structsysinfo</code>.</p>
+ </li>
+
+ <li>
+ <b>page 188</b>
+ <p>The file presented in Listing 8.11 should end with a ".c", i.e.,
+ "print-uname.c".</p>
+ </li>
+
+ <li>
+  <b>page 191</b>
+  <p>The assembly instructions shown corresponding to the <code>asm</code>
+   should be:
+  </p>
+  <blockquote><pre>
+#APP
+        mycool_asm %ecx, %edx
+#NOAPP
+</pre></blockquote>
+  <p>
+   reflecting the fact that <code>foo</code> and <code>bar</code> are
+   in separate registers.
+  </p>
+ </li>
+
+ <li>
+ <b>page 206</b>
+ <p>In the beginning of 10.4.1, the root process impersonates
+ another user, not another process.</p>
+ </li>
+
+ <li>
+ <b>page 212</b>
+ <p>The prototype of the GNU extension <code>getline</code>
+ function differs from that presented.  To use the GNU extension,
+ modify the code to</p>
+ <pre>
+ char *username = NULL;
+ size_t username_length = 0;
+ ssize_t characters_read = getline (&username, &username_length, stdin);
+ </pre>
+ <p>If the call fails, <code>characters_read</code> will be <code>-1</code>.
+ Otherwise, <code>username</code> will point to a <code>malloc</code>-allocated
+ buffer with <code>username_length</code> characters.</p>
+ </li>
+
+ <li>
+ <b>page 224</b>
+ <p>The third parameter in the call to <code>readlink</code> should
+ be <code>sizeof (link_target) - 1</code> to allow for the terminating
+ <code>NUL</code> character.</p>
+ </li>
+
+ <li>
+ <b>page 231</b>
+ <p>The third parameter in the first call to <code>write</code> should
+ be <code>strlen (bad_request_response)</code>.</p>
+ </li>
+
+ <li>
+ <b>page 241</b>
+ <p>The <code>error_page</code> string should note a failure to
+ open <code>/etc/issue</code>, not <code>/proc/issue</code>.</p>
+ </li>
+
+ <li>
+ <b>page 245</b>
+ <p>The comment above the <tt>get_group_name</tt> function should 
+ say &quot;deallocate with free&quot;, not &quot;allocate with 
+ free&quot;.</p>
+ </li>
+
+ <li>
+ <b>page 286</b>
+ <p>The first line inside the while loop is incorrect.  It should
+ read:
+<blockquote>
+size_t written = write (fd, buffer + count - left_to_write, 
+                        left_to_write);
+</blockquote>
+ </p>
+ </li>
+
+</ul>
+
+<hr size="1" noshade>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td align="right" valign="top">
+   <span class="footnote">Problems with this web site? 
+   <a href="mailto:webmaster@codesourcery.com">webmaster@codesourcery.com</a>
+   </span>
+  </td>
+ </tr>
+</table>
+</body>
+</html>
