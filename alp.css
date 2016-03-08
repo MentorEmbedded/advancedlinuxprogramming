@@ -4,7 +4,7 @@ body {
   margin-right: 8;
   margin-bottom: 8;
   color: black;
-  background: white url(/images/red-edge.png);
+  background: white url(images/red-edge.png);
   background-repeat: repeat-y;
   font-family: arial,sans-serif;
 }
