@@ -3,7 +3,7 @@
 ## About This Repository
 
 Most of the content resides in the gh-pages branch. This master branch
-contains this README and a LICENSE file.
+contains a README file and a LICENSE file.
 
 ## About Advanced Linux Programming
 
