@@ -1,22 +1,36 @@
-# Code listings from "Advanced Linux Programming"
-## CodeSourcery LLC
+# Advanced Linux Programming
 
-These are code samples from the book "Advanced Linux Programming," by
-Mark Mitchell, Jeffrey Oldham, and Alex Samuel of CodeSourcery LLC.
-For more information about this book, please visit this Web site:
+## About This Repository
 
-http://www.advancedlinuxprogramming.com/
+Most of the content resides in the gh-pages branch. The master branch
+contains a README file and a LICENSE file.
 
-To compile and build the programs on most standard GNU/Linux systems,
-simply invoke "make" from the top directory.  To clean up build
-products, invoke "make clean".  Some program listings do not contain
-complete, standalone programs; instead, they contain one or more
-functions.  Such files are compiled to object files only.
+## About Advanced Linux Programming
 
-See "Advanced Linux Programming" for information about the programs,
-what they do, how they work, and how to use them.
+### Publication Information
 
-The programs in "Advanced Linux Programming," and this entire
-distribution, are Copyright (C) 2001 by New Riders Publishing and
-distributed under the GNU General Public License.  The file COPYRIGHT
-contains the text of this license.
+```
+Advanced Linux Programming
+by Mark Mitchell, Jeffrey Oldham, and Alex Samuel, of CodeSourcery LLC
+published by New Riders Publishing
+ISBN 0-7357-1043-0
+First Edition, June 2001
+```
+
+### From the Back Cover
+
+Advanced Linux Programming is intended for the programmer already
+familiar with the C programming language. Authors Alex Samuel, Jeffrey
+Oldham, and Mark Mitchell of CodeSourcery, LLC take a tutorial
+approach and teach the most important concepts and power features of
+the GNU/Linux system in application programs.
+
+If you're a developer already experienced with programming for the
+GNU/Linux system, are experienced with another UNIX-like system and
+are interested in developing GNU/Linux software, or want to make the
+transition for a non-UNIX environment and are already familiar with
+the general principles of writing good software, this book is for
+you. In addition, you will find that this book is equally applicable
+to C and C++ programming. Even those progamming in other languages
+will find this book useful since the C language APIs and conventions
+are the lingua franca of GNU/Linux.
